@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Skill(frontend-design:frontend-design)",
+      "Bash(copy:*)",
+      "Bash(cmd /c copy:*)",
+      "Bash(cmd /c dir \"E:\\sol-de-tangay---exclusive-real-estate (2)\\public\\hero-home.png\")",
+      "Bash(cmd /c \"mkdir \"\"E:\\sol-de-tangay---exclusive-real-estate (2)\\public\"\" && copy \"\"E:\\sol-de-tangay---exclusive-real-estate (2)\\freepik__img1-toma-de-una-casa-de-campo-elegante-desde-la-p__59394.png\"\" \"\"E:\\sol-de-tangay---exclusive-real-estate (2)\\public\\hero-home.png\"\"\")",
+      "Bash(cmd /c xcopy:*)",
+      "Bash(powershell:*)",
+      "Bash(dir:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

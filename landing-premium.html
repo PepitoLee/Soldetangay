@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol de Tangay | Exclusive Estate Living</title>
+    <meta name="description" content="Descubre el arte de vivir en armonía. Lotes exclusivos de campo en Nuevo Chimbote con título saneado y máxima plusvalía.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sol de Tangay | Exclusive Estate Living">
+    <meta property="og:description" content="El refugio perfecto donde la naturaleza y el lujo convergen.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ══════════════════════════════════════════════════════════════
+           LUXURY EDITORIAL DESIGN SYSTEM
+           Sol de Tangay - Premium Real Estate Landing
+           Aesthetic: Architectural Digest meets Nature Sanctuary
+        ══════════════════════════════════════════════════════════════ */
+
+        :root {
+            /* Color Palette - Nature Luxury */
+            --forest-deep: #0D1F17;
+            --forest-mid: #1A3328;
+            --champagne: #C9A962;
+            --champagne-light: #D4C4A8;
+            --cream: #FAF8F5;
+            --cream-dark: #F0EDE8;
+            --sage: #A8C5A8;
+            --sage-mist: #E8EDE8;
+            --charcoal: #2C2C2C;
+            --gold-gradient: linear-gradient(135deg, #C9A962 0%, #E8D5A3 50%, #C9A962 100%);
+
+            /* Typography Scale */
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', system-ui, sans-serif;
+
+            /* Spacing */
+            --section-padding: clamp(80px, 12vh, 160px);
+            --container-width: 1400px;
+
+            /* Transitions */
+            --ease-elegant: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+            --duration-fast: 0.3s;
+            --duration-medium: 0.6s;
+            --duration-slow: 1s;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           RESET & FOUNDATIONS
+        ══════════════════════════════════════════════════════════════ */
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--cream);
+            color: var(--forest-deep);
+            line-height: 1.7;
+            font-weight: 400;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* Custom Selection */
+        ::selection {
+            background: var(--champagne);
+            color: var(--forest-deep);
+        }
+
+        /* Film Grain Overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10000;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           TYPOGRAPHY
+        ══════════════════════════════════════════════════════════════ */
+
+        .display-xl {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 10vw, 9rem);
+            font-weight: 300;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+        }
+
+        .display-lg {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        .display-md {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .label {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        .body-lg {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .text-gold {
+            color: var(--champagne);
+        }
+
+        .text-sage {
+            color: var(--sage);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           LAYOUT UTILITIES
+        ══════════════════════════════════════════════════════════════ */
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 clamp(24px, 5vw, 80px);
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        .section-dark {
+            background: var(--forest-deep);
+            color: var(--cream);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(40px, 8vw, 100px);
+        }
+
+        @media (min-width: 900px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           ANIMATIONS
+        ══════════════════════════════════════════════════════════════ */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes goldShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity var(--duration-slow) var(--ease-elegant),
+                        transform var(--duration-slow) var(--ease-elegant);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ══════════════════════════════════════════════════════════════
+           NAVIGATION
+        ══════════════════════════════════════════════════════════════ */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 30px 0;
+            transition: all var(--duration-medium) var(--ease-elegant);
+        }
+
+        .nav.scrolled {
+            background: rgba(13, 31, 23, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 20px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .nav-logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--cream);
+            letter-spacing: 0.15em;
+            text-decoration: none;
+        }
+
+        .nav-logo-sub {
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--champagne);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            transition: opacity var(--duration-fast);
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-link {
+                display: block;
+            }
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           BUTTONS
+        ══════════════════════════════════════════════════════════════ */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 36px;
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all var(--duration-medium) var(--ease-elegant);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--champagne);
+            color: var(--forest-deep);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(201, 169, 98, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--cream);
+            border: 1px solid rgba(250, 248, 245, 0.3);
+        }
+
+        .btn-outline:hover {
+            background: var(--cream);
+            color: var(--forest-deep);
+            border-color: var(--cream);
+        }
+
+        .btn-dark {
+            background: var(--forest-deep);
+            color: var(--cream);
+        }
+
+        .btn-dark:hover {
+            background: var(--forest-mid);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(13, 31, 23, 0.3);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           HERO SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .hero {
+            min-height: 100vh;
+            background: var(--forest-deep);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative Elements */
+        .hero-deco {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .hero-deco-circle {
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-deco-line {
+            width: 1px;
+            height: 150px;
+            background: linear-gradient(to bottom, var(--champagne), transparent);
+            bottom: 0;
+            left: 50%;
+        }
+
+        .hero-deco-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(201, 169, 98, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 169, 98, 0.03) 1px, transparent 1px);
+            background-size: 100px 100px;
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 0 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            animation: fadeUp 1s var(--ease-elegant) 0.2s both;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--champagne);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero-badge-text {
+            color: var(--champagne);
+        }
+
+        .hero-title {
+            color: var(--cream);
+            margin-bottom: 30px;
+            animation: fadeUp 1s var(--ease-elegant) 0.4s both;
+        }
+
+        .hero-title-line {
+            display: block;
+            overflow: hidden;
+        }
+
+        .hero-title .italic {
+            color: var(--champagne);
+        }
+
+        .hero-tagline {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(250, 248, 245, 0.7);
+            max-width: 500px;
+            margin-bottom: 50px;
+            animation: fadeUp 1s var(--ease-elegant) 0.6s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            animation: fadeUp 1s var(--ease-elegant) 0.8s both;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            color: var(--champagne);
+            animation: fadeIn 1s var(--ease-elegant) 1.5s both;
+        }
+
+        .hero-scroll-text {
+            writing-mode: vertical-rl;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--champagne), transparent);
+            animation: scrollBounce 2s infinite;
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: scaleY(1); transform-origin: top; }
+            50% { transform: scaleY(0.5); transform-origin: top; }
+        }
+
+        /* Stats Bar */
+        .hero-stats {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(201, 169, 98, 0.2);
+            padding: 30px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-stats-inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-stats-inner {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+            animation: fadeUp 1s var(--ease-elegant) calc(1s + var(--delay, 0s)) both;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            color: var(--champagne);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(250, 248, 245, 0.6);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           MANIFESTO SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .manifesto {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .manifesto-deco {
+            position: absolute;
+            font-family: var(--font-display);
+            font-size: clamp(15rem, 30vw, 40rem);
+            font-weight: 300;
+            color: var(--sage-mist);
+            line-height: 0.8;
+            top: -50px;
+            right: -100px;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .manifesto-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .manifesto-number {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            color: var(--champagne);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .manifesto-number::after {
+            content: '';
+            flex: 1;
+            max-width: 100px;
+            height: 1px;
+            background: var(--champagne);
+        }
+
+        .manifesto-title {
+            margin-bottom: 40px;
+        }
+
+        .manifesto-text {
+            max-width: 600px;
+            color: var(--charcoal);
+            opacity: 0.8;
+        }
+
+        .manifesto-visual {
+            position: relative;
+        }
+
+        .manifesto-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .manifesto-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 30% 70%, var(--sage) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, var(--champagne) 0%, transparent 40%);
+            opacity: 0.3;
+        }
+
+        .manifesto-image-text {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--cream);
+            line-height: 1.3;
+        }
+
+        .manifesto-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(250, 248, 245, 0.2);
+            pointer-events: none;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           BENEFITS SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .benefits {
+            background: var(--cream-dark);
+        }
+
+        .benefits-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--cream);
+            padding: clamp(30px, 5vw, 50px);
+            position: relative;
+            transition: all var(--duration-medium) var(--ease-elegant);
+            border: 1px solid transparent;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-gradient);
+            background-size: 200% 100%;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--duration-medium) var(--ease-elegant);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--champagne-light);
+            box-shadow: 0 30px 60px rgba(13, 31, 23, 0.1);
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .benefit-number {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 300;
+            color: var(--sage-mist);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: var(--forest-deep);
+        }
+
+        .benefit-text {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+            line-height: 1.8;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           LOTS SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .lots {
+            background: var(--forest-deep);
+            position: relative;
+        }
+
+        .lots-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .lots-header .label {
+            color: var(--champagne);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .lots-header .display-lg {
+            color: var(--cream);
+        }
+
+        .lots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .lot-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: clamp(35px, 5vw, 50px);
+            position: relative;
+            transition: all var(--duration-medium) var(--ease-elegant);
+        }
+
+        .lot-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--champagne);
+            transform: translateY(-5px);
+        }
+
+        .lot-card.featured {
+            border-color: var(--champagne);
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(201, 169, 98, 0.02) 100%);
+        }
+
+        .lot-badge {
+            position: absolute;
+            top: -1px;
+            right: 30px;
+            background: var(--champagne);
+            color: var(--forest-deep);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 16px;
+        }
+
+        .lot-type {
+            color: var(--champagne);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .lot-size {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 300;
+            color: var(--cream);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .lot-size span {
+            font-size: 1.5rem;
+            color: var(--champagne-light);
+        }
+
+        .lot-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--champagne);
+            margin: 25px 0;
+        }
+
+        .lot-features {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+
+        .lot-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(250, 248, 245, 0.7);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lot-features li::before {
+            content: '◆';
+            color: var(--champagne);
+            font-size: 0.5rem;
+        }
+
+        .lot-features li:last-child {
+            border-bottom: none;
+        }
+
+        .lot-cta {
+            width: 100%;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           AMENITIES SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .amenities {
+            background: var(--cream);
+            overflow: hidden;
+        }
+
+        .amenities-header {
+            margin-bottom: 60px;
+        }
+
+        .amenities-header .label {
+            color: var(--champagne);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .amenities-scroll {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding-bottom: 40px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .amenities-scroll::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        .amenities-scroll::-webkit-scrollbar-track {
+            background: var(--sage-mist);
+        }
+
+        .amenities-scroll::-webkit-scrollbar-thumb {
+            background: var(--champagne);
+        }
+
+        .amenity-card {
+            min-width: 300px;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .amenity-visual {
+            height: 350px;
+            background: var(--forest-deep);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .amenity-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--forest-deep), transparent 50%);
+            z-index: 1;
+        }
+
+        .amenity-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            opacity: 0.3;
+        }
+
+        .amenity-number {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--champagne);
+            z-index: 2;
+        }
+
+        .amenity-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .amenity-content p {
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           TRUST/LEGAL SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .trust {
+            background: var(--forest-deep);
+            position: relative;
+        }
+
+        .trust-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .trust-header .label {
+            color: var(--champagne);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .trust-header .display-md {
+            color: var(--cream);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--duration-medium) var(--ease-elegant);
+        }
+
+        .trust-item:hover {
+            border-color: var(--champagne);
+            background: rgba(201, 169, 98, 0.05);
+        }
+
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .trust-item h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--champagne);
+            margin-bottom: 15px;
+        }
+
+        .trust-item p {
+            font-size: 0.9rem;
+            color: rgba(250, 248, 245, 0.6);
+            line-height: 1.8;
+        }
+
+        .trust-quote {
+            text-align: center;
+            padding: 60px;
+            border: 1px solid rgba(201, 169, 98, 0.3);
+            position: relative;
+        }
+
+        .trust-quote::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 8rem;
+            color: var(--champagne);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            line-height: 1;
+        }
+
+        .trust-quote p {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-style: italic;
+            color: var(--cream);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           URGENCY SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .urgency {
+            background: linear-gradient(135deg, #1a0a0a 0%, #2d1a1a 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(201, 169, 98, 0.1) 0%, transparent 70%);
+        }
+
+        .urgency-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .urgency .label {
+            color: #e8a87c;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .urgency-counter {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .urgency-number {
+            font-family: var(--font-display);
+            font-size: clamp(5rem, 15vw, 12rem);
+            font-weight: 300;
+            color: var(--cream);
+            line-height: 1;
+        }
+
+        .urgency-total {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 300;
+            color: var(--champagne);
+        }
+
+        .urgency-label {
+            font-size: 1rem;
+            color: rgba(250, 248, 245, 0.6);
+            margin-bottom: 40px;
+        }
+
+        .urgency-bar {
+            max-width: 500px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 auto 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency-bar-fill {
+            height: 100%;
+            background: var(--gold-gradient);
+            background-size: 200% 100%;
+            animation: goldShimmer 3s linear infinite;
+            transition: width 2s var(--ease-elegant);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           FORM SECTION
+        ══════════════════════════════════════════════════════════════ */
+
+        .form-section {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--forest-deep);
+        }
+
+        @media (max-width: 899px) {
+            .form-section::before {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 900px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-info {
+            background: var(--forest-deep);
+            padding: clamp(40px, 8vw, 100px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-info .label {
+            color: var(--champagne);
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .form-info .display-md {
+            color: var(--cream);
+            margin-bottom: 30px;
+        }
+
+        .form-info p {
+            color: rgba(250, 248, 245, 0.7);
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .form-contact {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+        }
+
+        .form-contact-item {
+            margin-bottom: 20px;
+        }
+
+        .form-contact-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--champagne);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-contact-value {
+            color: var(--cream);
+            font-size: 1rem;
+        }
+
+        .form-wrapper {
+            background: var(--cream);
+            padding: clamp(40px, 8vw, 100px);
+        }
+
+        .contact-form {
+            max-width: 450px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--forest-deep);
+            margin-bottom: 12px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 18px 0;
+            border: none;
+            border-bottom: 1px solid var(--champagne-light);
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--forest-deep);
+            transition: border-color var(--duration-fast);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--champagne);
+        }
+
+        .form-group input::placeholder {
+            color: var(--charcoal);
+            opacity: 0.4;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+        }
+
+        .form-checkbox input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--champagne);
+            margin-top: 2px;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           WHATSAPP FLOAT
+        ══════════════════════════════════════════════════════════════ */
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .whatsapp-text {
+            background: var(--forest-deep);
+            color: var(--cream);
+            padding: 12px 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all var(--duration-fast) var(--ease-elegant);
+            white-space: nowrap;
+        }
+
+        .whatsapp-float:hover .whatsapp-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+            transition: all var(--duration-fast) var(--ease-elegant);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 25px;
+                right: 25px;
+            }
+
+            .whatsapp-text {
+                display: none;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           FOOTER
+        ══════════════════════════════════════════════════════════════ */
+
+        .footer {
+            background: #070d0a;
+            padding: 80px 0 40px;
+            color: rgba(250, 248, 245, 0.6);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-brand {
+            grid-column: span 1;
+        }
+
+        @media (min-width: 901px) {
+            .footer-brand {
+                grid-column: span 1;
+            }
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--cream);
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            color: var(--champagne);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .footer-legal {
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+
+        .footer h4 {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--champagne);
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(250, 248, 245, 0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color var(--duration-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--cream);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom a {
+            color: var(--champagne);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         NAVIGATION
+    ══════════════════════════════════════════════════════════════ -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#" class="nav-logo">
+                    <span class="nav-logo-text">SOL DE TANGAY</span>
+                    <span class="nav-logo-sub">Exclusive Estate Living</span>
+                </a>
+                <div class="nav-cta">
+                    <a href="#lotes" class="nav-link">Lotes</a>
+                    <a href="#cotizar" class="nav-link">Contacto</a>
+                    <a href="https://wa.me/51973068950?text=Hola,%20deseo%20información%20sobre%20Sol%20de%20Tangay." target="_blank" class="btn btn-primary">
+                        Solicitar Info
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         HERO SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="hero">
+        <div class="hero-deco hero-deco-circle"></div>
+        <div class="hero-deco hero-deco-line"></div>
+        <div class="hero-deco-grid"></div>
+
+        <div class="hero-content container">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-text label">Solo 3 lotes disponibles</span>
+            </div>
+
+            <h1 class="hero-title display-xl">
+                <span class="hero-title-line">El Arte de</span>
+                <span class="hero-title-line"><em class="italic">Vivir en Armonía</em></span>
+            </h1>
+
+            <p class="hero-tagline">
+                No vendemos metros cuadrados. Creamos un legado donde la naturaleza y el lujo convergen en perfecta sinfonía.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#cotizar" class="btn btn-primary">Descubrir el Proyecto</a>
+                <a href="#lotes" class="btn btn-outline">Ver Lotes Disponibles</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span class="hero-scroll-text">Explorar</span>
+            <span class="hero-scroll-line"></span>
+        </div>
+
+        <div class="hero-stats">
+            <div class="container">
+                <div class="hero-stats-inner">
+                    <div class="stat-item" style="--delay: 0s">
+                        <div class="stat-number">90</div>
+                        <div class="stat-label">Lotes Exclusivos</div>
+                    </div>
+                    <div class="stat-item" style="--delay: 0.1s">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-label">Áreas Verdes</div>
+                    </div>
+                    <div class="stat-item" style="--delay: 0.2s">
+                        <div class="stat-number">+20%</div>
+                        <div class="stat-label">Plusvalía Anual</div>
+                    </div>
+                    <div class="stat-item" style="--delay: 0.3s">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Legal y Saneado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         MANIFESTO SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section manifesto">
+        <div class="manifesto-deco">ST</div>
+        <div class="container">
+            <div class="grid-2">
+                <div class="manifesto-content">
+                    <div class="manifesto-number reveal">01 — Nuestra Filosofía</div>
+                    <h2 class="display-lg manifesto-title reveal reveal-delay-1">
+                        Un Santuario para<br><span class="italic text-gold">Generaciones</span>
+                    </h2>
+                    <p class="body-lg manifesto-text reveal reveal-delay-2">
+                        Sol de Tangay no es simplemente un desarrollo inmobiliario. Es una declaración de principios donde la naturaleza establece las reglas, donde cada amanecer promete tranquilidad, y donde su inversión se convierte en el legado de su familia.
+                    </p>
+                    <p class="body-lg manifesto-text reveal reveal-delay-3" style="margin-top: 20px;">
+                        A solo 2 minutos del centro urbano de Nuevo Chimbote, pero a años luz del caos y el ruido. Aquí, el tiempo transcurre diferente.
+                    </p>
+                </div>
+                <div class="manifesto-visual reveal reveal-delay-2">
+                    <div class="manifesto-image">
+                        <div class="manifesto-frame"></div>
+                        <p class="manifesto-image-text">
+                            "Donde la ciudad termina, comienza su refugio."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         BENEFITS SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section benefits">
+        <div class="container">
+            <div class="benefits-header">
+                <span class="label text-gold reveal">02 — Propuesta de Valor</span>
+                <h2 class="display-lg reveal reveal-delay-1">Seis Razones Irrefutables</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">01</div>
+                    <h3 class="benefit-title">Conexión Natural</h3>
+                    <p class="benefit-text">60% de áreas verdes preservadas. Aire puro, silencio absoluto, y la serenidad que su familia merece.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-1">
+                    <div class="benefit-number">02</div>
+                    <h3 class="benefit-title">Seguridad Integral</h3>
+                    <p class="benefit-text">Portón de ingreso controlado, cerco perimétrico completo y vigilancia las 24 horas del día.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-2">
+                    <div class="benefit-number">03</div>
+                    <h3 class="benefit-title">Comunidad Selecta</h3>
+                    <p class="benefit-text">Vecinos que comparten su visión de vida. Un ambiente exclusivo para familias con valores similares.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-3">
+                    <div class="benefit-number">04</div>
+                    <h3 class="benefit-title">Amenidades Premium</h3>
+                    <p class="benefit-text">Club recreativo con piscina semi-olímpica, parques, zona de mascotas y áreas de esparcimiento.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-4">
+                    <div class="benefit-number">05</div>
+                    <h3 class="benefit-title">Alta Plusvalía</h3>
+                    <p class="benefit-text">Proyección de +20% de valorización anual respaldada por el desarrollo vial de la zona.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-5">
+                    <div class="benefit-number">06</div>
+                    <h3 class="benefit-title">Legalidad Absoluta</h3>
+                    <p class="benefit-text">Título de propiedad saneado y registrado en SUNARP. Máxima seguridad jurídica garantizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         LOTS SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section lots" id="lotes">
+        <div class="container">
+            <div class="lots-header">
+                <span class="label reveal">03 — Portfolio de Lotes</span>
+                <h2 class="display-lg reveal reveal-delay-1">Seleccione su Parcela Ideal</h2>
+            </div>
+
+            <div class="lots-grid">
+                <div class="lot-card reveal">
+                    <span class="lot-type label">Townhouse</span>
+                    <div class="lot-size">140<span>m²</span></div>
+                    <div class="lot-divider"></div>
+                    <ul class="lot-features">
+                        <li>Acceso directo a avenida principal</li>
+                        <li>Jardín posterior incluido</li>
+                        <li>Ideal para familias jóvenes</li>
+                        <li>Seguridad 24/7</li>
+                    </ul>
+                    <a href="#cotizar" class="btn btn-outline lot-cta">Solicitar Información</a>
+                </div>
+
+                <div class="lot-card reveal reveal-delay-1">
+                    <span class="lot-type label">Villa</span>
+                    <div class="lot-size">160<span>m²</span></div>
+                    <div class="lot-divider"></div>
+                    <ul class="lot-features">
+                        <li>Ubicación central privilegiada</li>
+                        <li>Frente a parques y áreas verdes</li>
+                        <li>Mayor privacidad</li>
+                        <li>Vista panorámica</li>
+                    </ul>
+                    <a href="#cotizar" class="btn btn-outline lot-cta">Solicitar Información</a>
+                </div>
+
+                <div class="lot-card featured reveal reveal-delay-2">
+                    <span class="lot-badge">Más Exclusivo</span>
+                    <span class="lot-type label">Premium</span>
+                    <div class="lot-size">200<span>m²</span></div>
+                    <div class="lot-divider"></div>
+                    <ul class="lot-features">
+                        <li>Lotes esquineros exclusivos</li>
+                        <li>Máxima privacidad garantizada</li>
+                        <li>Sin vecinos posteriores</li>
+                        <li>Mayor potencial de valorización</li>
+                    </ul>
+                    <a href="#cotizar" class="btn btn-primary lot-cta">Solicitar Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         AMENITIES SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section amenities">
+        <div class="container">
+            <div class="amenities-header">
+                <span class="label reveal">04 — Experiencia de Vida</span>
+                <h2 class="display-lg reveal reveal-delay-1">Amenidades de Primer Nivel</h2>
+            </div>
+        </div>
+
+        <div class="amenities-scroll">
+            <div style="min-width: 40px;"></div>
+
+            <div class="amenity-card reveal">
+                <div class="amenity-visual">
+                    <span class="amenity-icon">🏊</span>
+                    <span class="amenity-number">01</span>
+                </div>
+                <div class="amenity-content">
+                    <h3>Club Recreativo & Piscinas</h3>
+                    <p>Piscina semi-olímpica y áreas de descanso para toda la familia.</p>
+                </div>
+            </div>
+
+            <div class="amenity-card reveal reveal-delay-1">
+                <div class="amenity-visual">
+                    <span class="amenity-icon">🌳</span>
+                    <span class="amenity-number">02</span>
+                </div>
+                <div class="amenity-content">
+                    <h3>Gran Parque Central</h3>
+                    <p>Lagos artificiales, senderos y zonas de contemplación.</p>
+                </div>
+            </div>
+
+            <div class="amenity-card reveal reveal-delay-2">
+                <div class="amenity-visual">
+                    <span class="amenity-icon">🐕</span>
+                    <span class="amenity-number">03</span>
+                </div>
+                <div class="amenity-content">
+                    <h3>Zona Pet-Friendly</h3>
+                    <p>Circuito de agility y áreas especiales para mascotas.</p>
+                </div>
+            </div>
+
+            <div class="amenity-card reveal reveal-delay-3">
+                <div class="amenity-visual">
+                    <span class="amenity-icon">🛒</span>
+                    <span class="amenity-number">04</span>
+                </div>
+                <div class="amenity-content">
+                    <h3>Plaza Comercial</h3>
+                    <p>Comercios de conveniencia para sus necesidades diarias.</p>
+                </div>
+            </div>
+
+            <div class="amenity-card reveal reveal-delay-4">
+                <div class="amenity-visual">
+                    <span class="amenity-icon">🛡️</span>
+                    <span class="amenity-number">05</span>
+                </div>
+                <div class="amenity-content">
+                    <h3>Seguridad Permanente</h3>
+                    <p>Control de acceso y monitoreo las 24 horas.</p>
+                </div>
+            </div>
+
+            <div style="min-width: 40px;"></div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         TRUST SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section trust">
+        <div class="container">
+            <div class="trust-header">
+                <span class="label reveal">05 — Garantías</span>
+                <h2 class="display-md reveal reveal-delay-1">Su Inversión, 100% Protegida</h2>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-item reveal">
+                    <span class="trust-icon">📜</span>
+                    <h3>Título Saneado</h3>
+                    <p>Propiedad con documentación completamente regularizada. No vendemos posesiones, vendemos propiedad real y transferible.</p>
+                </div>
+                <div class="trust-item reveal reveal-delay-1">
+                    <span class="trust-icon">🏛️</span>
+                    <h3>Registrado en SUNARP</h3>
+                    <p>Inscrito en los Registros Públicos del Perú. La máxima garantía legal que el Estado puede ofrecer.</p>
+                </div>
+                <div class="trust-item reveal reveal-delay-2">
+                    <span class="trust-icon">⚖️</span>
+                    <h3>Supervisión Profesional</h3>
+                    <p>Bajo la supervisión del Dr. Santos Rebaza. Arquitectura: Arq. Melvin Gonzales & Ing. Henry Velásquez.</p>
+                </div>
+            </div>
+
+            <div class="trust-quote reveal">
+                <p>"La confiabilidad no es una promesa, es un hecho documentado que respaldamos con cada escritura."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         URGENCY SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="urgency">
+        <div class="container">
+            <div class="urgency-content">
+                <span class="label reveal">Disponibilidad Limitada</span>
+
+                <div class="urgency-counter reveal reveal-delay-1">
+                    <span class="urgency-number" id="sold-counter">0</span>
+                    <span class="urgency-total">/ 90</span>
+                </div>
+
+                <p class="urgency-label reveal reveal-delay-2">Lotes vendidos o reservados</p>
+
+                <div class="urgency-bar reveal reveal-delay-3">
+                    <div class="urgency-bar-fill" id="progress-bar" style="width: 0%"></div>
+                </div>
+
+                <a href="#cotizar" class="btn btn-primary reveal reveal-delay-4">Reservar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         FORM SECTION
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section form-section" id="cotizar">
+        <div class="form-grid">
+            <div class="form-info">
+                <span class="label reveal">06 — Contacto</span>
+                <h2 class="display-md reveal reveal-delay-1">Inicie su Legado<br><span class="italic text-gold">Hoy</span></h2>
+                <p class="reveal reveal-delay-2">Complete el formulario y un asesor especializado le contactará en las próximas 24 horas con información personalizada.</p>
+
+                <div class="form-contact reveal reveal-delay-3">
+                    <div class="form-contact-item">
+                        <span class="form-contact-label">WhatsApp Directo</span>
+                        <span class="form-contact-value">+51 973 068 950</span>
+                    </div>
+                    <div class="form-contact-item">
+                        <span class="form-contact-label">Oficina</span>
+                        <span class="form-contact-value">Urb. San Rafael i4 Lote 22<br>Nuevo Chimbote</span>
+                    </div>
+                    <div class="form-contact-item">
+                        <span class="form-contact-label">Referencia</span>
+                        <span class="form-contact-value">Frente al Hospital Regional,<br>costado de Incafarma</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrapper">
+                <form class="contact-form" id="lead-form">
+                    <div class="form-group reveal">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                    </div>
+
+                    <div class="form-group reveal reveal-delay-1">
+                        <label for="telefono">Teléfono (WhatsApp)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999" required>
+                    </div>
+
+                    <div class="form-group reveal reveal-delay-2">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div class="form-group reveal reveal-delay-3">
+                        <label for="lote">Tipo de Lote de Interés</label>
+                        <select id="lote" name="lote">
+                            <option value="">Seleccione una opción</option>
+                            <option value="Townhouse (140m²)">Townhouse (140m²)</option>
+                            <option value="Villa (160m²)">Villa (160m²)</option>
+                            <option value="Premium (200m²)">Premium (200m²)</option>
+                            <option value="Por definir">Aún no lo decido</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group reveal reveal-delay-4">
+                        <label class="form-checkbox">
+                            <input type="checkbox" required>
+                            <span>Acepto ser contactado por un asesor de Sol de Tangay para recibir información sobre el proyecto.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark form-submit reveal reveal-delay-5">
+                        Solicitar Cotización
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">SOL DE TANGAY</div>
+                    <p class="footer-tagline">Exclusive Estate Living</p>
+                    <div class="footer-legal">
+                        <strong>SOL DE TANGAY SAC</strong><br>
+                        RUC: 20615096718<br>
+                        Urb. San Rafael i4 Lote 22<br>
+                        Nuevo Chimbote, Perú
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#lotes">Lotes Disponibles</a></li>
+                        <li><a href="#cotizar">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li>Título Saneado</li>
+                        <li>Registrado en SUNARP</li>
+                        <li>Documentación Completa</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/51973068950" target="_blank">+51 973 068 950</a></li>
+                        <li>Nuevo Chimbote, Perú</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Sol de Tangay SAC. Todos los derechos reservados.</p>
+                <p>Desarrollado con <a href="#">excelencia</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         WHATSAPP FLOAT
+    ══════════════════════════════════════════════════════════════ -->
+    <a href="https://wa.me/51973068950?text=Hola,%20deseo%20información%20exclusiva%20sobre%20Sol%20de%20Tangay." target="_blank" class="whatsapp-float">
+        <span class="whatsapp-text">Chatear ahora</span>
+        <span class="whatsapp-btn">
+            <svg viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+        </span>
+    </a>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         JAVASCRIPT
+    ══════════════════════════════════════════════════════════════ -->
+    <script>
+        // ═══════════════════════════════════════════════════════════
+        // SCROLL REVEAL ANIMATIONS
+        // ═══════════════════════════════════════════════════════════
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // ═══════════════════════════════════════════════════════════
+        // NAVIGATION SCROLL EFFECT
+        // ═══════════════════════════════════════════════════════════
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // ═══════════════════════════════════════════════════════════
+        // COUNTER ANIMATION
+        // ═══════════════════════════════════════════════════════════
+        const counterEl = document.getElementById('sold-counter');
+        const progressBar = document.getElementById('progress-bar');
+        const targetNumber = 87;
+        let hasAnimated = false;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    animateCounter();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counterObserver.observe(document.querySelector('.urgency'));
+
+        function animateCounter() {
+            let current = 0;
+            const duration = 2000;
+            const stepTime = duration / targetNumber;
+
+            const timer = setInterval(() => {
+                current++;
+                counterEl.textContent = current;
+                progressBar.style.width = (current / 90 * 100) + '%';
+
+                if (current >= targetNumber) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // ═══════════════════════════════════════════════════════════
+        // FORM SUBMISSION
+        // ═══════════════════════════════════════════════════════════
+        const form = document.getElementById('lead-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const lote = document.getElementById('lote').value;
+
+            let mensaje = `✨ *SOLICITUD DE INFORMACIÓN - SOL DE TANGAY*\n\n`;
+            mensaje += `👤 *Nombre:* ${nombre}\n`;
+            mensaje += `📱 *Teléfono:* ${telefono}\n`;
+            if (email) mensaje += `📧 *Email:* ${email}\n`;
+            if (lote) mensaje += `🏡 *Interés:* ${lote}\n`;
+            mensaje += `\n_Enviado desde Landing Premium_`;
+
+            const mensajeCodificado = encodeURIComponent(mensaje);
+            window.open(`https://wa.me/51973068950?text=${mensajeCodificado}`, '_blank');
+        });
+
+        // ═══════════════════════════════════════════════════════════
+        // SMOOTH SCROLL
+        // ═══════════════════════════════════════════════════════════
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

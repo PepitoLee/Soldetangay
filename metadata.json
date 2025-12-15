@@ -1,0 +1,7 @@
+{
+  "name": "Sol de Tangay - Exclusive Real Estate",
+  "description": "A premium immersive website for Sol de Tangay SAC, featuring exclusive country lots, nature integration, and investment opportunities.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
