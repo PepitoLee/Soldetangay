@@ -17,12 +17,17 @@ export const Contact: React.FC = () => {
                
                <div className="space-y-8 border-t border-white/10 pt-8">
                   <div>
-                     <p className="text-xs uppercase text-gray-500 mb-2">Gerencia Comercial</p>
-                     <p className="serif text-2xl">Juan Pérez</p>
+                     <p className="text-xs uppercase text-gray-500 mb-2">Oficina de Ventas</p>
+                     <p className="serif text-xl">Urb. San Rafael Mz. 14 - Lte. 22</p>
+                     <p className="text-sm text-gray-400">Nuevo Chimbote (Frente al Hospital Regional)</p>
                   </div>
                   <div>
                      <p className="text-xs uppercase text-gray-500 mb-2">Contacto Directo</p>
-                     <p className="serif text-2xl">+51 999 999 999</p>
+                     <p className="serif text-2xl">+51 973 068 950</p>
+                  </div>
+                  <div>
+                     <p className="text-xs uppercase text-gray-500 mb-2">Redes Sociales</p>
+                     <p className="serif text-xl text-[#8FBC8F]">@soldetangay</p>
                   </div>
                </div>
             </Reveal>

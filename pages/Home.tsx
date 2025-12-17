@@ -16,7 +16,7 @@ const HorizontalSection = () => {
     {
       title: "Naturaleza",
       subtitle: "Protagonista Absoluta",
-      desc: "Espacios donde cada árbol cuenta una historia. 60% de áreas verdes preservadas.",
+      desc: "5 hectáreas de exclusividad. Solo 90 socios propietarios en armonía con la naturaleza.",
       img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2532&auto=format&fit=crop"
     },
     {
@@ -28,7 +28,7 @@ const HorizontalSection = () => {
     {
       title: "Comunidad",
       subtitle: "Selecta & Segura",
-      desc: "Un entorno blindado para la paz mental de su familia.",
+      desc: "Pórtico con videovigilancia, cerco perimétrico e iluminación con paneles solares.",
       img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop"
     }
   ];
@@ -78,15 +78,17 @@ export const Home: React.FC = () => {
         </motion.div>
         
         <motion.div style={{ opacity, y: yText }} className="relative z-10 text-center text-white px-4 mix-blend-overlay">
+          <p className="text-xl uppercase tracking-[0.3em] font-light mb-4">Exclusivo Club de Campo</p>
           <h1 className="cinzel text-[12vw] leading-none font-bold tracking-tighter opacity-90">
             SOL DE<br/>TANGAY
           </h1>
-          <p className="mt-6 text-xl uppercase tracking-[0.3em] font-light">El Refugio Perfecto</p>
+          <p className="mt-6 text-3xl md:text-5xl tracking-wide font-light opacity-90">El equilibrio perfecto entre naturaleza y exclusividad</p>
         </motion.div>
 
         <div className="absolute bottom-10 left-10 text-white z-20 flex flex-col gap-2">
            <span className="text-xs uppercase tracking-widest opacity-70">Ubicación</span>
-           <span className="serif text-xl">Nuevo Chimbote</span>
+           <span className="serif text-xl">Tangay Bajo, Nuevo Chimbote</span>
+           <span className="text-xs opacity-60">Preventa 2026</span>
         </div>
 
         <div className="absolute bottom-10 right-10 text-white z-20 animate-bounce">
@@ -142,7 +144,7 @@ export const Home: React.FC = () => {
                      <span className="text-[#8FBC8F] text-xs uppercase tracking-widest mb-6 block">La Ubicación</span>
                      <h2 className="serif text-5xl md:text-7xl mb-8">Campo &<br/>Ciudad</h2>
                      <p className="text-gray-400 text-xl mb-12 max-w-md">
-                        A solo 2 minutos de la civilización, pero a años luz del ruido. Estratégicamente posicionado para maximizar su tiempo y su inversión.
+                        A 1 minuto de la Av. Anchoveta y 2 minutos de la Vía de Evitamiento. Privilegiada vista panorámica de toda la ciudad.
                      </p>
                      
                      <div className="space-y-6 mb-12">
@@ -151,8 +153,8 @@ export const Home: React.FC = () => {
                               <Clock size={20} />
                            </div>
                            <div>
-                              <h4 className="uppercase tracking-widest text-sm">2 Minutos</h4>
-                              <p className="text-gray-500 text-sm">Conexión Urbana Inmediata</p>
+                              <h4 className="uppercase tracking-widest text-sm">1 Minuto</h4>
+                              <p className="text-gray-500 text-sm">Av. Anchoveta</p>
                            </div>
                         </div>
                         <div className="flex items-center gap-6 group cursor-pointer">
@@ -160,8 +162,8 @@ export const Home: React.FC = () => {
                               <TrendingUp size={20} />
                            </div>
                            <div>
-                              <h4 className="uppercase tracking-widest text-sm">Plusvalía</h4>
-                              <p className="text-gray-500 text-sm">Av. Anchoveta y Vía de Evitamiento</p>
+                              <h4 className="uppercase tracking-widest text-sm">2 Minutos</h4>
+                              <p className="text-gray-500 text-sm">Vía de Evitamiento</p>
                            </div>
                         </div>
                      </div>
@@ -173,10 +175,15 @@ export const Home: React.FC = () => {
                </div>
                
                <div className="relative h-[600px] w-full">
-                  <ParallaxImage 
-                     src="https://images.unsplash.com/photo-1449824913929-65aa06cf04a4?q=80&w=2225&auto=format&fit=crop" 
-                     height="100%" 
-                     className="rounded-lg grayscale hover:grayscale-0 transition-all duration-700" 
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15610.847383752675!2d-78.53500000000001!3d-9.116700000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ab80912c89bdf5%3A0x4c5b3e0c5c8c1c1c!2sTangay%20Bajo%2C%20Nuevo%20Chimbote!5e0!3m2!1ses!2spe!4v1702900000000!5m2!1ses!2spe"
+                     width="100%"
+                     height="100%"
+                     style={{ border: 0 }}
+                     allowFullScreen
+                     loading="lazy"
+                     referrerPolicy="no-referrer-when-downgrade"
+                     className="rounded-lg grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute -bottom-10 -left-10 bg-[#f4f5f0] p-8 text-[#0f1c15] max-w-xs hidden md:block shadow-2xl">
                      <p className="serif text-xl italic">"El secreto de la inversión inmobiliaria es ver el futuro antes de que sea evidente."</p>
@@ -196,7 +203,7 @@ export const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#0f1c15]/10 border border-[#0f1c15]/10">
                {[
                   { title: "Legalidad", desc: "Título de Propiedad inscrito en Registros Públicos. Sin sorpresas.", icon: <Shield /> },
-                  { title: "Diseño", desc: "Masterplan desarrollado por el Arq. Melvin Gonzales Puertas.", icon: <TreePine /> },
+                  { title: "Diseño", desc: "Masterplan por Trazzos Arquitectos. Supervisión: Arq. Melvin Gonzáles.", icon: <TreePine /> },
                   { title: "Rentabilidad", desc: "Proyección de retorno superior al 20% anual por desarrollo vial.", icon: <TrendingUp /> }
                ].map((item, i) => (
                   <div key={i} className="bg-[#e8ebe4] p-12 hover:bg-[#f4f5f0] transition-colors group">

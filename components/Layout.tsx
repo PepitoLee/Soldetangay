@@ -38,7 +38,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           <Link to="/" className="group relative z-50">
             <div className="flex flex-col">
               <span className="cinzel text-2xl font-bold tracking-[0.2em] leading-none group-hover:opacity-70 transition-opacity">SOL DE TANGAY</span>
-              <span className="text-[0.5rem] uppercase tracking-[0.5em] mt-1 opacity-80">Sanctuary & Investment</span>
+              <span className="text-[0.5rem] uppercase tracking-[0.5em] mt-1 opacity-80">Club de Campo</span>
             </div>
           </Link>
 
@@ -109,9 +109,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             
             {/* Menu Decor */}
             <div className="absolute bottom-10 left-10 text-xs opacity-30 max-w-[200px]">
-               SOL DE TANGAY SAC<br/>
-               Desarrollo Inmobiliario<br/>
-               Nuevo Chimbote, Perú
+               SOL DE TANGAY CLUB DE CAMPO<br/>
+               Tangay Bajo - Nuevo Chimbote<br/>
+               www.soldetangay.com | @soldetangay
             </div>
           </motion.div>
         )}
@@ -147,14 +147,17 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
              <div>
                 <h4 className="opacity-50 mb-4 uppercase tracking-widest">Social</h4>
                 <ul className="space-y-2">
-                   <li><a href="#" className="hover:text-[#8FBC8F]">Instagram</a></li>
-                   <li><a href="#" className="hover:text-[#8FBC8F]">Facebook</a></li>
+                   <li><a href="https://instagram.com/soldetangay" target="_blank" rel="noreferrer" className="hover:text-[#8FBC8F]">Instagram</a></li>
+                   <li><a href="https://facebook.com/soldetangay" target="_blank" rel="noreferrer" className="hover:text-[#8FBC8F]">Facebook</a></li>
+                   <li><a href="https://www.soldetangay.com" target="_blank" rel="noreferrer" className="hover:text-[#8FBC8F]">www.soldetangay.com</a></li>
                 </ul>
              </div>
              <div>
                 <h4 className="opacity-50 mb-4 uppercase tracking-widest">Contacto</h4>
-                <p>Nuevo Chimbote, Perú</p>
-                <p>+51 999 999 999</p>
+                <p>Urb. San Rafael Mz. 14 - Lte. 22</p>
+                <p>Nuevo Chimbote (Frente al Hospital Regional)</p>
+                <p className="mt-2">+51 973 068 950</p>
+                <p className="text-[#8FBC8F]">@soldetangay</p>
              </div>
           </div>
         </div>

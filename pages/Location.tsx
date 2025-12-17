@@ -40,7 +40,7 @@ export const Location: React.FC = () => {
             </h1>
             <div className="flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-8">
                <p className="max-w-xl text-gray-400 text-lg">
-                  Estratégicamente ubicado en la intersección del crecimiento urbano y la preservación natural.
+                  Tangay Bajo, Nuevo Chimbote. A 1 min de Av. Anchoveta y 2 min de Vía de Evitamiento. Vista panorámica de toda la ciudad.
                </p>
                <a href="https://maps.app.goo.gl/kLgiQUdh6aRvkoyD9?g_st=ipc" target="_blank" rel="noreferrer" className="mt-6 md:mt-0 flex items-center gap-2 text-[#8FBC8F] uppercase tracking-widest text-xs hover:underline">
                   Abrir Google Maps Externo <ArrowRight size={14} />

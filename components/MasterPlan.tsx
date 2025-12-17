@@ -84,7 +84,7 @@ export const MasterPlan: React.FC = () => {
   }, [isLayerMode, currentLayerIndex]);
 
   useEffect(() => {
-    const targetDate = new Date('2025-12-31T23:59:59').getTime();
+    const targetDate = new Date('2026-01-31T23:59:59').getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate - now;
@@ -134,9 +134,9 @@ export const MasterPlan: React.FC = () => {
         number: i + 1,
         block: 'A',
         type: isCornerA ? 'corner' : 'standard',
-        priceSale: isCornerA ? 150000 : 120000,
-        pricePresale: isCornerA ? 120000 : 100000,
-        priceUsd: isCornerA ? 32000 : 30000,
+        priceSale: 40000, // Venta regular USD
+        pricePresale: 30000, // Preventa 2026 USD (primeros 10 lotes)
+        priceUsd: 30000, // Preventa USD
         status: getStatus(i, 'A'),
         area: 250,
         dimensions: '10m x 25m',
@@ -153,9 +153,9 @@ export const MasterPlan: React.FC = () => {
         number: i + 1,
         block: 'B',
         type: isCornerB ? 'corner' : 'standard',
-        priceSale: isCornerB ? 150000 : 120000,
-        pricePresale: isCornerB ? 120000 : 100000,
-        priceUsd: isCornerB ? 32000 : 30000,
+        priceSale: 40000, // Venta regular USD
+        pricePresale: 30000, // Preventa 2026 USD (primeros 10 lotes)
+        priceUsd: 30000, // Preventa USD
         status: getStatus(i, 'B'),
         area: 250,
         dimensions: '10m x 25m',
@@ -254,8 +254,8 @@ export const MasterPlan: React.FC = () => {
                <div className="bg-[#0f1c15] text-[#f4f5f0] px-8 py-4 rounded-full flex items-center gap-6 shadow-2xl">
 
                   <div className="text-right border-r border-white/20 pr-6">
-                     <span className="block text-[10px] uppercase tracking-widest opacity-60">Cierre Preventa</span>
-                     <span className="font-serif font-bold text-xl">31 DIC</span>
+                     <span className="block text-[10px] uppercase tracking-widest opacity-60">Preventa 2026</span>
+                     <span className="font-serif font-bold text-xl">ENERO</span>
                   </div>
                   <div className="font-mono text-2xl text-[#8FBC8F] tabular-nums tracking-wider">
                      {timeLeft.days}d {timeLeft.hours}h
@@ -543,17 +543,17 @@ export const MasterPlan: React.FC = () => {
                               <div className="space-y-4 mb-8 border-t border-gray-100 pt-6">
                                  <div className="flex justify-between items-end">
                                     <div>
-                                       <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">Precio Preventa (Soles)</span>
-                                       <span className="serif text-3xl text-[#0f1c15]">{formatCurrency(selectedLot.pricePresale)}</span>
+                                       <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">Preventa 2026 (USD)</span>
+                                       <span className="serif text-3xl text-[#0f1c15]">{formatCurrency(selectedLot.pricePresale, 'USD')}</span>
                                     </div>
                                     <div className="text-right">
-                                       <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">USD (Aprox)</span>
-                                       <span className="serif text-xl text-gray-600">{formatCurrency(selectedLot.priceUsd, 'USD')}</span>
+                                       <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">Venta Regular</span>
+                                       <span className="serif text-xl text-gray-600">{formatCurrency(selectedLot.priceSale, 'USD')}</span>
                                     </div>
                                  </div>
                                  <div className="flex items-center gap-2 text-[10px] text-[#8FBC8F] bg-[#0f1c15] py-2 px-3 rounded w-fit">
                                     <DollarSign size={10} />
-                                    <span className="uppercase tracking-wider font-bold">Ahorro Preventa Incluido</span>
+                                    <span className="uppercase tracking-wider font-bold">Inicial 50% • Financiamiento 3 años</span>
                                  </div>
                               </div>
 
